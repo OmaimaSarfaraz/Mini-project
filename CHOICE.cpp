@@ -1,19 +1,24 @@
+/*THIS PROGRAM ASK USER TO CHOOSE FROM 4 OPTIONS OR TO EXIT FIRST OPTION IS CALCULATOR
+SECOND OPTION IS TABLE THIRD OPTION IS POWER OF ANY NUMBER OR FOURTH OPTION IS GUESS GAME*/
 #include <iostream> 
 #include <math.h>
 #include<string>
 using namespace std;
 int main()
 {  
+   //ASKING FOR NAME AND CHOICE
    string name;
    int choice;
    cout<<"Enter your name: ";
    getline(cin,name); 
    cout<<"HI! "<<name<<" WHAT DO YOU WANT \n1.CALCULATOR \n2.TABLE \n3.POWER OF A NUMBER \n4.NUMBER GUESSING GAME \n5.EXIT \nENTER YOUR CHOICE: ";
    cin>>choice;
+   //SELECTING THE CASE OF USER CHOICE
    switch(choice)
    {
    	case 1:
-   	{  char op;
+   	{  //CASE 1 FOR CALCULATOR FUNCTIONS
+	   char op;
 	   float n1, n2; 
 	   cout<<"**CALCULATOR**"<<endl;  
 	   cout<<"Enter two integers one by one: ";
@@ -50,7 +55,8 @@ int main()
    		break;
 	   }
    	case 2:
-   	{   int table,length;
+   	{   //CASE 2 FOR TABLE PRINTING
+	    int table,length;
    	    cout<<"**TABLE**"<<endl;
 	    cout<<"Which table you want to print: ";
 	    cin>>table;
@@ -63,7 +69,8 @@ int main()
    		break;
 	   }
 	case 3:
-	{   int num,power;
+	{   //CASE 3 FOR POWER OF ANY NUMBER
+	    int num,power;
 	    long double result;
 	    cout<<"**POWER**"<<endl;
 	    cout<<"Enter a number: ";
@@ -75,7 +82,8 @@ int main()
 		break;
 	}
 	case 4:
-	{   int num=15,playernum=0,attempts=0,i=5;
+	{   //CASE 4 FOR NUMBER GUESSING CHALLANGE
+	    int num=15,playernum=0,attempts=0,i=5;
         const int maxattempts=5;
         cout<<endl<<"WELCOME! "<<name<<" to the number guessing game. "<<endl;
         cout<<"I am thinking of a number between 10 to 20."<<endl;
@@ -102,11 +110,13 @@ int main()
 		break;
 	}
 	case 5:
-	{   cout<<"YOU CHOOSE EXIT! GOOD BYE.";
+	{  //CASE 5 FOR EXIT 
+	    cout<<"YOU CHOOSE EXIT! GOOD BYE.";
 		break;
 	}
 	default:
-	{ cout<<"***INVALID CHOICE***";
+	{ //DEFAULT FOR SELECTING WRONG OPTION
+	  cout<<"***INVALID CHOICE***";
 	}
    }
    return 0;
